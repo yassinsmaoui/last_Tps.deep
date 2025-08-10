@@ -1,0 +1,43 @@
+# Fichiers de modèles PyTorch (trop volumineux pour GitHub)
+*.pth
+*.pt
+*.ckpt
+
+# Données d'entraînement
+dataset/
+data/
+*.h5
+*.hdf5
+
+# Fichiers temporaires Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Résultats d'entraînement volumineux
+runs/
+outputs/
+checkpoints/
