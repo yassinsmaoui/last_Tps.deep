@@ -1,0 +1,112 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Deep Learning with PyTorch: A Detailed IMRAD Report}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report presents a comprehensive study of Convolutional Neural Networks (CNNs) implemented with PyTorch for image classification. We follow the IMRAD structure, provide code insights, and include all extracted visualizations to illustrate the learning process, model performance, and analysis.
+\end{abstract}
+
+\section{Introduction}
+Deep learning has revolutionized computer vision, with CNNs being the backbone of most state-of-the-art image classification systems. PyTorch, a flexible and widely-used deep learning framework, allows for low-level customization and transparent model development. This report details the process of building, training, and analyzing a CNN on the CIFAR-10 dataset using PyTorch, with a focus on reproducibility and interpretability.
+
+\section{Methods}
+\subsection{Dataset}
+We use the CIFAR-10 dataset, which consists of 60,000 32x32 color images in 10 classes, with 6,000 images per class. The dataset is split into 50,000 training and 10,000 test images.
+
+\subsection{Model Architecture}
+A custom CNN was implemented using PyTorch's \texttt{nn.Module}. The architecture includes multiple convolutional layers, batch normalization, ReLU activations, max pooling, dropout, and fully connected layers. Data augmentation and normalization were applied to improve generalization.
+
+\subsection{Training Procedure}
+The model was trained using the Adam optimizer and cross-entropy loss. Training and validation metrics were monitored, and the best model was saved based on validation accuracy. Various visualizations were generated to analyze the learning process and model behavior.
+
+\section{Results}
+\subsection{Training and Validation Curves}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pytorch_imgs/figure_01.png}
+    \caption{Training and validation loss/accuracy curves.}
+\end{figure}
+
+\subsection{Confusion Matrix}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{pytorch_imgs/figure_02.png}
+    \caption{Normalized confusion matrix for the test set.}
+\end{figure}
+
+\subsection{Sample Predictions}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pytorch_imgs/figure_03.png}
+    \caption{Examples of correct and incorrect predictions with confidence scores.}
+\end{figure}
+
+\subsection{Convolutional Filters}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{pytorch_imgs/figure_04.png}
+    \caption{Visualization of learned convolutional filters.}
+\end{figure}
+
+\subsection{Feature Maps}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pytorch_imgs/figure_05.png}
+    \caption{Feature maps from different layers of the CNN.}
+\end{figure}
+
+\subsection{Class Probability Analysis}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pytorch_imgs/figure_06.png}
+    \caption{Class probability and confidence analysis.}
+\end{figure}
+
+\subsection{Model Weights and Gradients}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pytorch_imgs/figure_07.png}
+    \caption{Distribution of model weights and gradients.}
+\end{figure}
+
+\subsection{Architecture Comparison}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pytorch_imgs/figure_08.png}
+    \caption{Comparison of different CNN architectures.}
+\end{figure}
+
+\subsection{Data Augmentation and Error Analysis}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pytorch_imgs/figure_09.png}
+    \caption{Impact of data augmentation and class-wise error analysis.}
+\end{figure}
+
+\subsection{Performance Dashboard}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{pytorch_imgs/figure_10.png}
+    \caption{Comprehensive performance dashboard summarizing all metrics.}
+\end{figure}
+
+\section{Discussion}
+The results demonstrate the effectiveness of PyTorch for deep learning research and practice. The model achieved strong performance on CIFAR-10, and the visualizations provided insights into the learning dynamics, feature extraction, and error patterns. Data augmentation and architectural choices significantly influenced the results. Future work could explore transfer learning, more advanced architectures, and interpretability techniques.
+
+\section{Conclusion}
+This report showcased a full PyTorch workflow for image classification, from data loading to model analysis, with all results documented and visualized. The approach is reproducible and can be extended to other datasets and tasks.
+
+\end{document}
